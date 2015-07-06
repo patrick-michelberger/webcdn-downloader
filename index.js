@@ -8,22 +8,15 @@ var fs = require('fs'),
 var download = function(uri, filename, callback) {
     var parsed_uri = url.parse(uri);
     var parsed_path = parsed_uri.path;
-
-    console.log("parsed_uri: ", parsed_uri);
-
-    /*
-    if (parsed_path.charAt(0) === '/')
-        parsed_path = parsed_path.slice(1);
-	*/
+    var filename = path.basename(parsed_path);
+    var dirname = path.dirname(parsed_path);
+    var base_path = "data/ " + parsed_uri.host + dirname;
+    var full_path = base_path + '/' + filename;
 
     request.head(uri, function(err, res, body) {
-        var filename = path.basename(parsed_path),
-            dirname = path.dirname(parsed_path);
-        var dir = parsed_uri.host + dirname;
-        mkdirp(dir, function(err) {
+        mkdirp(base_path, function(err) {
             if (err) console.error(err)
-            console.log("write file: ", dir + '/' + filename);
-            request(uri).pipe(fs.createWriteStream(dir + '/' + filename)).on('close', callback);
+            request(uri).pipe(fs.createWriteStream(full_path)).on('close', callback);
         });
     });
 
