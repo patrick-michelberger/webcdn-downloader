@@ -9,6 +9,7 @@
   "author": "Patrick Michelberger <patrick.michelberger@tum.de>",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1.36",
     "mkdirp": "^0.5.1",
     "request": "^2.58.0"
   }
