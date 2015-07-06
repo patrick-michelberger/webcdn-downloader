@@ -11,6 +11,7 @@
   "dependencies": {
     "aws-sdk": "^2.1.36",
     "mkdirp": "^0.5.1",
-    "request": "^2.58.0"
+    "request": "^2.58.0",
+    "s3-upload-stream": "^1.0.7"
   }
 }
