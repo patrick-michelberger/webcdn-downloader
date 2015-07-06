@@ -1,0 +1,15 @@
+{
+  "name": "webcdn-downloader",
+  "version": "1.0.0",
+  "description": "This is a static resource downloade and auto-uploader to Amazon S3 to enable cross-site requests for WebCDN testing purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Michelberger <patrick.michelberger@tum.de>",
+  "license": "ISC",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "request": "^2.58.0"
+  }
+}
