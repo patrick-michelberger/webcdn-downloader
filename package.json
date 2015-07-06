@@ -1,7 +1,7 @@
 {
   "name": "webcdn-downloader",
   "version": "1.0.0",
-  "description": "This is a static resource downloade and auto-uploader to Amazon S3 to enable cross-site requests for WebCDN testing purposes",
+  "description": "This is a static resource downloader and auto-uploader to Amazon S3 to enable cross-site requests for WebCDN testing purposes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
