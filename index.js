@@ -14,8 +14,8 @@ var loadWebsites = function(websites) {
             var $ = cheerio.load(html);
             var i = 0;
             var loopImages = function(arr) {
-                var url = arr[i].attribs['data-webcdn-fallback'];
-                downloader.load(url, function(err) {
+                var url = arr[i].attribs['src'];
+                downloader.load(url, website.name, function(err) {
                     i++;
                     if (err) {
                         console.log("Error: ", err);
